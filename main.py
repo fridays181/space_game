@@ -5,6 +5,15 @@ def bars():
 #importing random lib
 import random
 import numpy
+
+score = 0
+
+def scoreboard():
+    global score
+    score = score + 1
+def scoreboardL():
+    global score
+    scored = 0
 #randomizing alien and player health
 def healthRan():
     global enH
@@ -47,6 +56,7 @@ def epew():
 def shoot():
     global enH
     global pH
+    global score
     healthRan()
     while True:
         bars()
@@ -65,6 +75,7 @@ def shoot():
         if enH < 0:
             bars()
             print("You won")
+            scoreboard()
             ship_two_boom()
             print(" ")
             print(" ")
@@ -75,6 +86,8 @@ def shoot():
         elif pH < 0:
             bars()
             print("You lost :(")
+            print(score)
+            scoreboardL()
             ship_two()
             print(" ")
             print(" ")
