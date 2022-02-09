@@ -1,8 +1,10 @@
+
 #stlye points
 def bars():
     print("-0=TTTTTTTTTTTTTTTTTTTTTTTTTT=0-")
 #importing random lib
 import random
+import numpy
 #randomizing alien and player health
 def healthRan():
     global enH
@@ -45,10 +47,10 @@ def epew():
 def shoot():
     global enH
     global pH
+    healthRan()
     while True:
         bars()
         ship_two()
-        healthRan()
         print(" ")
         print(" ")
         ship_one()
